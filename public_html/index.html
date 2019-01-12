@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="MySql Partie 5">
+        <meta name="author" content="Leveque Matthieu">
+        <title>MySql Partie 5</title>
+        <!-- main core CSS -->
+        <link href="assets/css/main.css" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 bgMatt">
+                    <h1>MySql Partie 5</h1>
+                    <p><strong>Consigne</strong>:</p>
+                    <ul>
+                        <li>Exercice 1: Dans la table languages, afficher toutes les données de la table.</li>
+                        <li>Exercice 2: Dans la table languages, afficher toutes les versions de PHP.</li>
+                        <li>Exercice 3: Dans la table languages, afficher toutes les versions de PHP et de JavaScript.</li>
+                        <li>Exercice 4: Dans la table languages, afficher toutes les lignes ayant pour id 3,5,7.</li>
+                        <li>Exercice 5: Dans la table languages, afficher les deux première entrées de JavaScript.</li>
+                        <li>Exercice 6: Dans la table languages, afficher toutes les lignes qui ne sont pas du PHP.</li>
+                        <li>Exercice 7: Dans la table languages, afficher toutes les données par ordre alphabétique.</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="row">      
+                <div class="col-md-12 bgMatt">
+                    <h1>Résultat:</h1>              
+                    <p>Exercice 1:</p>
+                    <ul>
+                        <li>SELECT *</li>
+                        <li>->FROM languages;</li>
+                    </ul>
+                    <p>Exercice 2:</p>
+                     <ul>
+                        <li>SELECT language, version</li>
+                        <li>->FROM languages WHERE language = 'PHP';</li>
+                    </ul>
+                    <p>Exercice 3:</p>
+                     <ul>
+                        <li>SELECT language, version</li>
+                        <li>->FROM languages</li>
+                        <li>->WHERE language='PHP' OR language='JavaScript';</li>
+                    </ul>
+                    <p>Exercice 4:</p>
+                     <ul>
+                        <li>SELECT id</li>
+                        <li>->FROM languages</li>
+                        <li>->WHERE id=3 OR id=5 OR id=7;</li>
+                    </ul>
+                    <p>Exercice 5:</p>
+                     <ul>
+                        <li>SELECT *</li>
+                        <li>->FROM languages</li>
+                        <li>->WHERE language='JavaScript'</li>
+                        <li>->LIMIT 2;</li>
+                    </ul>
+                    <p>Exercice 6:</p>
+                    <ul>
+                        <li>SELECT *</li>
+                        <li>->FROM languages</li>
+                        <li>->WHERE NOT language='PHP';</li>
+                    </ul>
+                    <p>Exercice 7:</p>
+                    <ul>
+                        <li>SELECT *</li>
+                        <li>->FROM languages</li>
+                        <li>->ORDER BY language;</li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <footer>
+            </footer>
+    </body>
+</html>
